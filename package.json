@@ -1,0 +1,69 @@
+{
+  "name": "to-do-pig",
+  "private": true,
+  "version": "0.0.0",
+  "main": "dist-electron/main.js",
+  "author": "GinPang",
+  "description": "A to do app",
+  "scripts": {
+    "dev": "vite",
+    "build": "rimraf dist-electron && vue-tsc && vite build &&  electron-forge make",
+    "preview": "vite preview",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "@vicons/ionicons5": "^0.12.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "copyfiles": "^2.4.1",
+    "electron": "^22.0.0",
+    "naive-ui": "^2.34.3",
+    "postcss": "^8.4.20",
+    "rimraf": "^3.0.2",
+    "sass": "^1.57.1",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.3",
+    "unplugin-auto-import": "^0.12.1",
+    "unplugin-vue-components": "^0.22.12",
+    "vite": "^4.0.0",
+    "vite-plugin-electron": "^0.11.1",
+    "vue-tsc": "^1.0.11"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "rebuildConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

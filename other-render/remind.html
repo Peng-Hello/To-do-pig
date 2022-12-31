@@ -1,0 +1,36 @@
+<!--
+ * @Author: lzp
+ * @Date: 2022-12-31 18:25:26
+ * @LastEditors: lzp
+ * @LastEditTime: 2022-12-31 21:58:20
+ * @Description: 提醒猪
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小猪提醒来喽</title>
+</head>
+
+<body style="overflow: hidden;">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <img id="pig" src="./img/call.gif" alt="" style="width: 412px;height:412px;" ondragstart="return false;">
+
+</body>
+<script>
+    const pig = document.getElementById("pig");
+    pig.addEventListener("click", () => {
+        window.closeWindow.closeRemindWindow()
+    })
+</script>
+
+</html>
