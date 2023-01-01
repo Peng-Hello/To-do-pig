@@ -2,7 +2,7 @@
  * @Author: lzp
  * @Date: 2022-12-31 12:14:55
  * @LastEditors: lzp
- * @LastEditTime: 2022-12-31 22:00:49
+ * @LastEditTime: 2023-01-01 13:57:06
  * @Description: 创建任务
 -->
 <script lang="ts" setup>
@@ -12,7 +12,7 @@ import { TaskListItem } from "../type/type";
 import { taskListDataSetter } from "../store/TaskData";
 const message = useMessage();
 const hours: Ref<number[]> = ref([]);
-const minutes: Ref<number[]> = ref([]);
+
 const getHours = () => {
   const enable: number[] = [];
   const time = new Date();
@@ -20,16 +20,6 @@ const getHours = () => {
     enable.push(hour);
   }
   hours.value = enable;
-};
-const getMinutes = () => {
-  const enable: number[] = [];
-  const time = new Date();
-  for (let minute = time.getMinutes() + 1; minute < 60; minute++) {
-    enable.push(minute);
-  }
-  console.log(enable);
-
-  minutes.value = enable;
 };
 
 const form: Ref<TaskListItem> = ref({
@@ -56,6 +46,17 @@ function launch() {
   };
   message.success("新建任务成功");
 }
+
+// 调整分钟封禁
+function isMinuteDisabled(minute: number, hour: number | null) {
+  const time = new Date();
+  const nowHour = time.getHours();
+  const nowMinute = time.getMinutes();
+  if (hour === nowHour && minute <= nowMinute) {
+    return true;
+  }
+  return false;
+}
 </script>
 <template>
   <div class="flex mt-7">
@@ -69,15 +70,14 @@ function launch() {
     <n-time-picker
       placeholder="选择提醒时间"
       clearable
-      :hours="hours"
-      :minutes="minutes"
-      format="h:mm a"
       class="ml-3 w-56"
+      format="h:mm a"
+      :hours="hours"
+      :is-minute-disabled="isMinuteDisabled"
       :on-update:value="setRemindTime"
       :on-focus="
         () => {
           getHours();
-          getMinutes();
         }
       "
     />
