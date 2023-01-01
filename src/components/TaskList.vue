@@ -2,7 +2,7 @@
  * @Author: lzp
  * @Date: 2022-12-31 11:44:58
  * @LastEditors: lzp
- * @LastEditTime: 2022-12-31 21:54:53
+ * @LastEditTime: 2023-01-01 14:05:18
  * @Description: 任务列表
 -->
 <script lang="ts" setup>
@@ -21,7 +21,7 @@ function formatTime(diffTime: number) {
 }
 </script>
 <template>
-  <n-scrollbar class="max-h-80 overflow-x-hidden">
+  <n-scrollbar class="max-h-96 overflow-x-hidden">
     <n-card class="mb-3" v-for="item in taskList" :key="item.title">
       <div class="flex items-center">
         <CheckmarkCircleOutline
@@ -55,7 +55,7 @@ function formatTime(diffTime: number) {
     </n-card>
     <div
       v-if="taskList.length === 0"
-      class="text-lg h-60 flex items-center justify-center"
+      class="text-lg h-80 flex items-center justify-center"
     >
       <span class="mr-2">暂时没有任务</span>
       <HappyOutline class="w-7"></HappyOutline>

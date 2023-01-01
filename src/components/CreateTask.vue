@@ -2,7 +2,7 @@
  * @Author: lzp
  * @Date: 2022-12-31 12:14:55
  * @LastEditors: lzp
- * @LastEditTime: 2023-01-01 13:57:06
+ * @LastEditTime: 2023-01-01 14:02:15
  * @Description: 创建任务
 -->
 <script lang="ts" setup>
@@ -59,7 +59,7 @@ function isMinuteDisabled(minute: number, hour: number | null) {
 }
 </script>
 <template>
-  <div class="flex mt-7">
+  <div class="flex mt-5">
     <n-input
       clearable
       type="text"
