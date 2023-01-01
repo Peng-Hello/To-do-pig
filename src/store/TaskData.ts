@@ -2,7 +2,7 @@
  * @Author: lzp
  * @Date: 2022-12-31 16:29:07
  * @LastEditors: lzp
- * @LastEditTime: 2022-12-31 20:54:45
+ * @LastEditTime: 2023-01-01 12:55:35
  * @Description: TaskList 数据
  */
 import { ref, Ref } from "vue";
@@ -15,7 +15,9 @@ function createReminder() {
   if (!finished && remindTime !== 0) {
     setTimeout(() => {
       //  调用 preload 脚本
-      window.openWindow.openRemindWindow();
+      if (!newTask.finished) {
+        window.openWindow.openRemindWindow();
+      }
     }, remindTime);
   }
 }
