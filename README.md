@@ -1,18 +1,35 @@
-# Vue 3 + TypeScript + Vite
+<!--
+ * @Author: lzp
+ * @Date: 2022-12-31 09:14:41
+ * @LastEditors: lzp
+ * @LastEditTime: 2023-01-01 10:32:41
+ * @Description: To do pig
+-->
+# To do pig
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![MIT License](https://img.shields.io/github/license/Peng-Hello/To-do-pig)
 
-## Recommended IDE Setup
+[English version](./doc/en.md)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support For `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+![Preview](./doc/img/preview.gif)
+## 介绍
+这是一款 To Do List 软件， 但是加入可爱的小猪提醒功能。灵感来源 《点燃我，温暖你》中男主角李峋使用到的任务提醒小猪。
+## 快速开始
+```shell
+# 安装依赖
+yarn
+# 开发
+yarn dev
+# 构建
+yarn build
+```
+## 技术栈
+- TailWind Css
+- Naive UI
+- Vue
+- Typescript
+- Electron
+## 声明
+软件中的小猪版权归《点燃我，温暖你》制片方所有。本软件仅供学习交流，如作他用所承受的法律责任一概与作者无关。
+## 更新日志
+- 更新中英文文档
