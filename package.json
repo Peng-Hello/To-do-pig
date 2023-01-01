@@ -42,7 +42,10 @@
   },
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "name": "To Do Pig",
+        "icon": "./electron-icon/favicon.ico"
+      },
       "rebuildConfig": {},
       "makers": [
         {
