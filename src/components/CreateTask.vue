@@ -2,7 +2,7 @@
  * @Author: lzp
  * @Date: 2022-12-31 12:14:55
  * @LastEditors: lzp
- * @LastEditTime: 2023-01-01 14:02:15
+ * @LastEditTime: 2023-01-01 14:06:20
  * @Description: 创建任务
 -->
 <script lang="ts" setup>
@@ -41,7 +41,7 @@ function launch() {
   taskListDataSetter(form.value);
   form.value = {
     title: "",
-    remindTime: Date.now(),
+    remindTime: 0,
     finished: false,
   };
   message.success("新建任务成功");
